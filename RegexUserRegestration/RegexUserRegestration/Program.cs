@@ -15,7 +15,7 @@ namespace RegexUserRegestration
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Exit");
+                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Last NAme \n3.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,6 +23,11 @@ namespace RegexUserRegestration
                         Console.WriteLine("\nEnter First Name");
                         string fName = Console.ReadLine();
                         validatestring.validateFirstName(fName);
+                        break;
+                    case 2:
+                        Console.WriteLine("\n enter the last name");
+                        string lName = Console.ReadLine();
+                        validatestring.validateLastName(lName);
                         break;
                     default:
                         flag = false;

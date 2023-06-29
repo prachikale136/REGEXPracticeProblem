@@ -9,7 +9,8 @@ namespace RegexUserRegestration
 {
     internal class Validatestring
     {
-        public static string FirstName = "^[A-Z]{1}[A-Za-z]{2,}$";
+        public string FirstName = "^[A-Z]{1}[A-Za-z]{2,}$";
+        public string LastName = "^[A-Z]{1}[A-Za-z]{2,}$";
         public void validateFirstName(string fName)
         {
             if (Regex.IsMatch(fName, FirstName))
@@ -18,7 +19,19 @@ namespace RegexUserRegestration
             }
             else
             {
-                Console.WriteLine("First alphabet should be capital and Minimum 3 character should be there");
+                Console.WriteLine("First alphabet should be capital");
+            }
+        }
+
+        public void validateLastName(string lName)
+        {
+            if (Regex.IsMatch(lName, LastName))
+            {
+                Console.WriteLine("Last Name : " + lName);
+            }
+            else
+            {
+                Console.WriteLine("First alphabet must be capital");
             }
         }
     }
