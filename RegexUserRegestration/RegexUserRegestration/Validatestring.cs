@@ -34,5 +34,13 @@ namespace RegexUserRegestration
                 Console.WriteLine("First alphabet must be capital");
             }
         }
+        public void validateEmailId(string emailID)
+        {
+            string EmailId = "^[a-z0-9][-a-z0-9._]+@([-a-z0-9]+.)+[a-z]{2,5}$";
+            if (Regex.IsMatch(emailID, EmailId))
+                Console.WriteLine(emailID + " is Valid");
+            else
+                Console.WriteLine(emailID + " is Invalid");
+        }
     }
 }
