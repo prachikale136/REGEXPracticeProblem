@@ -51,5 +51,15 @@ namespace RegexUserRegestration
             else
                 Console.WriteLine(mobileNumber + " is Invalid");
         }
+
+        //For Password
+        public void validatePassword(string password)
+        {
+            string Password = "^.{8,}?";
+            if (Regex.IsMatch(password, Password))
+                Console.WriteLine(password + " is Valid");
+            else
+                Console.WriteLine(password + " is Invalid");
+        }
     }
 }
