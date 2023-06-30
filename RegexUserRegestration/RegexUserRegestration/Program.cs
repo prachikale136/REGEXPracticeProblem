@@ -15,7 +15,7 @@ namespace RegexUserRegestration
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Last NAme \n3. email id \n4. mobile number \n5. Password \n6.Password in upper Case \n7. numeric PAssword \n8. Special character password \n9.  Exit");
+                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Last NAme \n3. email id \n4. mobile number \n5. Password \n6.Password in upper Case \n7. numeric PAssword \n8. Special character password \n9. Email \n10. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -55,9 +55,14 @@ namespace RegexUserRegestration
                         validatestring.validateNumericPassword(numPass);
                         break;
                     case 8:
-                        Console.WriteLine("Enter numeric password");
+                        Console.WriteLine("Enter password");
                         string specialPass = Console.ReadLine();
                         validatestring.validateSpecialcarPassword(specialPass);
+                        break;
+                    case 9:
+                        Console.WriteLine("Enter email");
+                        string mailid = Console.ReadLine();
+                        validatestring.validateEmailId(mailid);
                         break;
                     default:
                         flag = false;
