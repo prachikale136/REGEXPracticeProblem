@@ -70,5 +70,14 @@ namespace RegexUserRegestration
             else
                 Console.WriteLine(ucPassword + " is Invalid");
         }
+        //For Numeric Password
+        public void validateNumericPassword(string NumericPassword)
+        {
+            string numericPassword = "^.{8,}?";
+            if (Regex.IsMatch(NumericPassword, numericPassword))
+                Console.WriteLine(NumericPassword + " is Valid");
+            else
+                Console.WriteLine(NumericPassword + " is Invalid");
+        }
     }
 }

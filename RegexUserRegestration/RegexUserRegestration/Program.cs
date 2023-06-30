@@ -15,7 +15,7 @@ namespace RegexUserRegestration
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Last NAme \n3. email id \n4. mobile number \n5. Password \n6.Password in upper Case \n7.  Exit");
+                Console.WriteLine("\nEnter option to choose \n1.First Name \n2.Last NAme \n3. email id \n4. mobile number \n5. Password \n6.Password in upper Case \n7. numeric PAssword \n8.  Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -48,6 +48,11 @@ namespace RegexUserRegestration
                         Console.WriteLine("Enter password");
                         string upperPass = Console.ReadLine();
                         validatestring.validateUperCasePassword(upperPass); 
+                        break;
+                    case 7:
+                        Console.WriteLine("Enter numeric password");
+                        string numPass = Console.ReadLine();
+                        validatestring.validateUperCasePassword(numPass);
                         break;
                     default:
                         flag = false;
